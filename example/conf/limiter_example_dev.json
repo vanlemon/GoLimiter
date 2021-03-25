@@ -1,0 +1,48 @@
+{
+  "env": "dev",
+  "limiter_config": {
+    "service_name": "limiter.example.dev",
+    "default_pass": true,
+    "global_on": false,
+    "global_limiter_type": "simple",
+    "local_limiter_type": "token",
+    "method_qps_limit": {
+      "Method1": {
+        "step": 0,
+        "global_qps": 0,
+        "local_qps": 2
+      },
+      "Method2": {
+        "step": 0,
+        "global_qps": 0,
+        "local_qps": 1
+      }
+    }
+  },
+  "limiter_redis": {
+    "host": "127.0.0.1",
+    "port": something,
+    "password": "something",
+    "db": 0
+  },
+  "log_config": {
+    "env": "prod",
+    "log_dir": "logs",
+    "log_file_name": "access.log",
+    "log_server_ip": "127.0.0.1",
+    "log_server_port": 12201,
+    "mail_bot": {
+      "name": "NaNaSe On Call (Test)",
+      "smtp_server_ip": "smtp.qq.com",
+      "smtp_server_port": 587,
+      "from_mail_address": "something@qq.com",
+      "to_mail_address_list": [
+        "something@qq.com",
+        "something@qq.com"
+      ],
+      "username": "something@qq.com",
+      "password": "something",
+      "enable": false
+    }
+  }
+}
